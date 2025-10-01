@@ -18,6 +18,8 @@ return new class extends Migration
             $table->date("end_date")->nullable();
             $table->foreignId('user_id')	//létre is hozza a mezőt
           ->constrained('users');
+            $table->foreignId('category_id')	//létre is hozza a mezőt
+          ->constrained('categories');
             $table->boolean("status");
             $table->timestamps();
         });
